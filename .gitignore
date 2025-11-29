@@ -1,2 +1,4 @@
 *.pyc
 docs/*
+*.pdb
+clean_extract.ipynb

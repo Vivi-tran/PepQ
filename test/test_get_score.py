@@ -118,7 +118,7 @@ def test_get_data_select_score_filters_and_includes_derived():
     data = make_sample_data()
     # only keep prot_plddt and PTM
     out = gs.get_data(data, select_score=("prot_plddt", "PTM"))
-    # there are 3 ranks across complexes in sample data (complex1: rank001+rank002, complex2: rank001)
+
     assert isinstance(out, list) and len(out) == 3
     for rec in out:
         assert "complex_id" in rec and "rank" in rec
@@ -146,7 +146,6 @@ def test_nan_and_inf_handling_in_summary_select():
     arr = [1.0, float("nan"), 3.0]
     # nan ignored by nanmean/nanmedian -> mean of [1,3] -> 2.0
     assert gs._summary_select(arr, "mean") == pytest.approx(2.0)
-    # inf remains but _summary_select will include it -> but our _summary_select uses nan-aware functions
     arr2 = [1.0, float("inf")]
     # mean may be inf; check function doesn't crash
     m = gs._summary_select(arr2, "mean")
