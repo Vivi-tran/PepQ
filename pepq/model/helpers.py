@@ -12,7 +12,7 @@ This module centralises:
 
 from __future__ import annotations
 
-from typing import Optional, Union, TYPE_CHECKING
+from typing import Union
 
 import numpy as np
 import pandas as pd
@@ -28,7 +28,7 @@ try:  # classification
 except Exception:  # pragma: no cover - optional dependency
     try:
         # Older versions used different class naming
-        from mapie.classification import MapieClassifier as MAPIEClassifier  # type: ignore[attr-defined]
+        from mapie.classification import MapieClassifier as MAPIEClassifier
     except Exception:  # pragma: no cover
         MAPIEClassifier = None  # type: ignore[assignment]
 

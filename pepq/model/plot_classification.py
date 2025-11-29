@@ -133,14 +133,14 @@ from sklearn.metrics import (
 from sklearn.calibration import calibration_curve
 
 # Class colours (use consistently: 0 -> NEG, 1 -> POS)
-COLOR_NEG = "#0B4F6C"   # deep slate / navy  (class 0)
-COLOR_POS = "#FF6B6B"   # coral / warm pink   (class 1)
+COLOR_NEG = "#0B4F6C"  # deep slate / navy  (class 0)
+COLOR_POS = "#FF6B6B"  # coral / warm pink   (class 1)
 
-ACCENT    = "#FFB000"   # warm gold highlight
+ACCENT = "#FFB000"  # warm gold highlight
 
 # Diagnostics curve colours (muted / complementary)
-COLOR_ROC = "#225E8E"   # muted cobalt / prussian-blue for ROC
-COLOR_PR  = "#1E9A82"   # muted teal/green for PR (complements navy+coral)
+COLOR_ROC = "#225E8E"  # muted cobalt / prussian-blue for ROC
+COLOR_PR = "#1E9A82"  # muted teal/green for PR (complements navy+coral)
 COLOR_BASELINE = "#9CA3AF"
 
 

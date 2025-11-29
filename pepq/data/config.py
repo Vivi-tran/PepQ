@@ -148,4 +148,7 @@ class PreprocessorConfig:
         return ded, var, scl
 
     def __repr__(self) -> str:
-        return f"PreprocessorConfig(dedup={self.dedup}, variance={self.variance}, scaler={self.scaler}, return_dataframe={self.return_dataframe})"
+        return (
+            f"PreprocessorConfig(dedup={self.dedup}, variance={self.variance},"
+            + f" scaler={self.scaler}, return_dataframe={self.return_dataframe})"
+        )

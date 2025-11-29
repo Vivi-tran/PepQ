@@ -51,7 +51,7 @@ class DockEDA(BaseEDA):
         # Optionally, attach model-based feature importances
         eda.set_feature_importance_from_model(fitted_rf)
 
-        eda.plot_overview_nature(top_k=6, figsize=(9.0, 7.0))
+        eda.plot_overview(top_k=6, figsize=(9.0, 7.0))
         eda.figures["overview_nature"].savefig(
             "eda_overview_nature.png", dpi=300, bbox_inches="tight"
         )
@@ -263,7 +263,7 @@ class DockEDA(BaseEDA):
     # ------------------------------------------------------------------
     # Nature-style 2×2 overview (with feature importance in panel C)
     # ------------------------------------------------------------------
-    def plot_overview_nature(
+    def plot_overview(
         self,
         top_k: int = 4,
         standardize: bool = True,
